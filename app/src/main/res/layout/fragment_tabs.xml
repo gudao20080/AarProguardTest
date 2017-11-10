@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@drawable/base_dialog_white_bg"
+             tools:context="com.example.arrlib1.TabsFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@android:color/holo_red_light"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@android:color/white"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@android:color/black"
+            app:tabIndicatorHeight="1dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@android:color/holo_red_light"
+            app:tabTextColor="@android:color/darker_gray"
+            >
+        </android.support.design.widget.TabLayout>
+
+    </android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

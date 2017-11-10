@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingLeft="13dp"
+              android:paddingRight="13dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+
+        android:paddingTop="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_jiajiang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bb_jiajiang"
+            />
+
+        <TextView
+            android:id="@+id/tv_play_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_33"
+            android:textSize="14sp"
+            tools:text="胜平负"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_8c"
+            android:textSize="10sp"
+            tools:text="2017-10-11 17:26:03"
+
+            />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:nestedScrollingEnabled="false"
+        ></android.support.v7.widget.RecyclerView>
+
+    <!--<LinearLayout
+        android:id="@+id/ll_sub_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        tools:layout_height="50dp"
+        android:orientation="vertical">
+
+    </LinearLayout>-->
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/bb_arrow_selector"
+        />
+
+    <include layout="@layout/divider_line_horizontal"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="13dp"
+        android:paddingTop="13dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投注金额: "
+            android:textColor="@color/color_8c"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_bet_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_8c"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@id/tv_a"
+            tools:text="￥200 "
+            />
+
+
+        <TextView
+            android:id="@+id/tv_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="175dp"
+            android:singleLine="true"
+            android:text="预计奖金: "
+            android:textColor="@color/color_8c"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_bonus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_8c"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@+id/tv_b"
+            tools:text="￥50000000000.12"
+            />
+
+        <TextView
+            android:id="@+id/tv_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="价格变动，请确认最新的转让价格"
+            android:textColor="@color/color_ff4b1a"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_a"
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/transfer_selector"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="转让 ￥150"
+        />
+
+</LinearLayout>

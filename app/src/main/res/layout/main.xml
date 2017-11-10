@@ -1,0 +1,45 @@
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/smartRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:srlDisableContentWhenRefresh="true"
+    app:srlEnableHeaderTranslationContent="true"
+    >
+
+    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srlClassicsSpinnerStyle="Scale"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/sticky_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.aarproguardtest.pinned.ui.PinnedHeaderExpandableListView
+                android:id="@+id/expandablelist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@null"
+                android:childDivider="@drawable/child_bg"
+                android:childIndicatorLeft="0dp"
+                android:divider="@color/Grey"
+                android:dividerHeight="1dp"
+                android:groupIndicator="@null"
+                android:scrollbarAlwaysDrawHorizontalTrack="false">
+            </com.example.aarproguardtest.pinned.ui.PinnedHeaderExpandableListView>
+
+
+        </LinearLayout>
+
+        <include layout="@layout/empty_layout"/>
+    </RelativeLayout>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

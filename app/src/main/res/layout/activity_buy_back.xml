@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".BuyBackActivity">
+
+    <include layout="@layout/base_appbar_white"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc" />
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/commonTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        app:tl_textSelectColor="@color/color_ff4b1a"
+        app:tl_textUnselectColor="@color/color_595959"
+        app:tl_textsize="14sp"
+        app:tl_indicator_color="@color/color_ff4b1a"
+        app:tl_indicator_width="20dp"
+        app:tl_indicator_height="2dp"
+
+        />
+
+    <include layout="@layout/divider_line_horizontal"/>
+
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>

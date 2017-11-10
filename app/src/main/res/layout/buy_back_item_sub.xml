@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:paddingBottom="10dp"
+                                             android:paddingTop="10dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="周三 002 巴甲"
+        android:textColor="@color/color_33"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_vs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="巴竞技 VS 戈竞技"
+        android:textColor="@color/color_33"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_date"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未开赛"
+        android:textColor="@color/color_595959"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
+
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/rv"
+       android:layout_marginTop="10dp"
+       android:layout_width="wrap_content"
+       app:layout_constraintTop_toBottomOf="@+id/tv_date"
+       app:layout_constraintLeft_toLeftOf="parent"
+       android:nestedScrollingEnabled="false"
+       android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>

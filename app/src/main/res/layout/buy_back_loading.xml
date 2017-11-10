@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_loading"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:visibility="gone"
+              xmlns:tools="http://schemas.android.com/tools"
+              tools:visibility="visible"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+
+    <ImageView
+        android:id="@+id/iv_loading"
+        android:layout_width="113dp"
+        android:layout_height="125dp"
+        android:src="@drawable/bb_loading"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="彩票加载中..."
+        android:textColor="@color/color_595959"
+        />
+
+</LinearLayout>

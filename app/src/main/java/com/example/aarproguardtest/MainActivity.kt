@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 //        list.add("")
 //        list.add("")
 //        list.add("")
-        val adapter = ImageLoadAdapter(list)
+        val adapter = ImageLoadAdapter(this, list)
         recycler.adapter = adapter
 
 

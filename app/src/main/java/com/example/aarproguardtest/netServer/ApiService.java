@@ -13,7 +13,9 @@ import okhttp3.Request;
 public class ApiService {
     private static OkHttpClient client = new OkHttpClient();
 
-    public static void getList(String url, Callback callback) throws IOException {
+    public static void getList(int page, int size, Callback callback) throws IOException {
+        String url = "https://api.m.jd.com/client.action?functionId=searchWare&body={\"pageIdx\":" + page
+                + ",\"pageSize\": " + size + ",\"searchType\":\"3\",\"shopId\":\"1000080061\",\"sort\":\"0\",\"source\":\"app-paipai\"}&client=paipai&clientVersion=6.5.0";
         Request request = new Request.Builder()
                 .url(url)
                 .build();

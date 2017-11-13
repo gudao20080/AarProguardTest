@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.aarproguardtest.R;
+import com.example.aarproguardtest.bean.Info;
 
 import java.util.List;
 
@@ -20,10 +21,18 @@ import java.util.List;
 
 public class ImageLoadAdapter extends RecyclerView.Adapter<ImageLoadAdapter.ViewHolder> {
     private Context mContext;
-    private List<String> mList;
+    private List<Info.ResultBean.WareInfo> mList;
 
-    public ImageLoadAdapter(Context context, List<String> list) {
+    public ImageLoadAdapter(Context context, List<Info.ResultBean.WareInfo> list) {
         mContext = context;
+        mList = list;
+    }
+
+    public List<Info.ResultBean.WareInfo> getList() {
+        return mList;
+    }
+
+    public void setList(List<Info.ResultBean.WareInfo> list) {
         mList = list;
     }
 
@@ -35,18 +44,20 @@ public class ImageLoadAdapter extends RecyclerView.Adapter<ImageLoadAdapter.View
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String url = mList.get(position);
         holder.setIsRecyclable(false);
+        Info.ResultBean.WareInfo wareInfo = mList.get(position);
+//        holder.setIsRecyclable(false);
         Log.i("way", "recycleable: " + holder.isRecyclable());
-        if (holder.tv.getTag() != null) {
-            holder.tv.setTag(url);
-            Log.i("way", url);
-        }else {
-            Log.i("way", "tag is null");
-        }
+//        if (holder.tv.getTag() != null) {
+//            holder.tv.setTag(url);
+//            Log.i("way", url);
+//        }else {
+//            Log.i("way", "tag is null");
+//        }
 
 //        Log.i("way", "url-> " + url);
-        Glide.with(mContext).load(url).into(holder.iv);
+        Glide.with(mContext).load(wareInfo.getImageurl()).into(holder.iv);
+        holder.tv.setText(wareInfo.getWname());
     }
 
     @Override

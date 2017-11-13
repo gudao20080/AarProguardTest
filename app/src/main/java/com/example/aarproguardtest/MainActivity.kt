@@ -7,6 +7,8 @@ import com.example.aarproguardtest.adapter.ImageLoadAdapter
 
 
 class MainActivity : AppCompatActivity() {
+    val url = "https://api.m.jd.com/client.action?functionId=searchWare&body=%7B%22pageIdx%22:1,%22pageSize%22:20,%22searchType%22:%223%22,%22shopId%22:%221000080061%22,%22sort%22:%220%22,%22source%22:%22app-paipai%22%7D&client=paipai&clientVersion=6.5.0"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
